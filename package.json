@@ -1,0 +1,43 @@
+{
+  "name": "pingpong-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "autoprefixer": "^9.5.1",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "jquery": "^3.5.0",
+    "path": "^0.12.7",
+    "skeleton-css": "^2.0.4",
+    "socket.io": "^2.3.0",
+    "tailwindcss": "^1.3.5"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
+    "cssnano": "^4.1.10",
+    "dotenv-flow": "^3.1.0",
+    "live-server": "^1.2.1",
+    "nodemon": "^2.0.3",
+    "postcss-cli": "^6.1.2"
+  },
+  "scripts": {
+    "serve": "cross-env NODE_ENV=development concurrently \"postcss public/tailwind.css -o public/build/tailwind.css --watch\"  \"live-server ./public\"",
+    "development": "cross-env NODE_ENV=development postcss public/tailwind.css -o public/build/tailwind.css",
+    "production": "cross-env NODE_ENV=production postcss public/tailwind.css -o public/build/tailwind.css",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hasbilaalaoui-latifa/PingPongGame.git"
+  },
+  "author": "Latifa Hasbi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hasbilaalaoui-latifa/PingPongGame/issues"
+  },
+  "homepage": "https://github.com/hasbilaalaoui-latifa/PingPongGame#readme"
+}
