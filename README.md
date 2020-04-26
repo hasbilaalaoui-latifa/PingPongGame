@@ -7,7 +7,7 @@ Il s'agit d'un jeu de ping-pong développé dans le cadre d'un projet universita
 * CSS3
 * Node JS (Express JS)
 * Socket.IO
-* Docker
+* Tailwind
 
 # Pour démarer le jeux 
 ## Dans le répertoire du projet, vous pouvez:
@@ -17,13 +17,6 @@ Il s'agit d'un jeu de ping-pong développé dans le cadre d'un projet universita
 <pre><code>
 1. npm install
 2. npm start
-</code></pre>
-
-* Utilisé Docker :
-[DOCKER ](https://docs.docker.com/docker-for-windows/install/)
-<pre><code>
-docker-compose build
-docker-compose up
 </code></pre>
 
 * L'affichage dans votre navigateur ouvrez le :
@@ -42,6 +35,4 @@ Vous avez un menu pour choisir si vous souhaiter jouer :
 4. Le gagnant est le premier à avoir 6 points.
 
 # L'interface du jeu :
-![img](https://contents.mediadecathlon.com/p1744682/2000x2000/sq/ballon_de_football_first_kick_taille_5_12_ans_rouge_kipsta_by_decathlon_8511691_1744682.jpg?k=375e3ba0d0c5b3dd17b10c1fe4c6c6f7)
-
-
+![img](https://i.imgur.com/DQeKQJk.png)
