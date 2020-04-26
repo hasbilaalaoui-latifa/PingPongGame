@@ -3,7 +3,7 @@ class Game {
         this.groundWidth = 900;
         this.groundHeight = 500;
         this.groundColor = "#DCDCDC"; //gainsboro color
-        this.netWidth = 6;
+        this.netWidth = 7;
         this.netColor = "#FFFFFF";
         this.scorePosPlayer1 = 390;
         this.scorePosPlayer2 = 475;
