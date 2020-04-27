@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ping Pong</title>
+  <link rel="icon" href="../../images/racket.png">
+  <link rel="stylesheet" type="text/css" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="../node_modules/skeleton-css/css/skeleton.css">
+  <script src="../js/ball.js"></script>
+  <script src="../js/player.js"></script>
+  <script src="../js/room.js"></script>
+  <script src="../js/game.js"></script>
+  <script src="../js/game.display.js"></script>
+  <script src="../js/game.control.js"></script>
+  <script src="../js/game.keycode.js"></script>
+  <script src="../js/game.ia.js"></script>
+  <script>
+      function exit(){
+        window.location.href="http://localhost:8080/";
+
+      }
+  </script>
+  <style>
+    body {
+        background: url("https://m.keepsporting.com/assets/img/sports/tennis-da-tavolo.jpg?1481814759") no-repeat center fixed;
+        margin:0;
+        padding:0;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position:  center;
+        color : white;
+
+
+
+
+    }
+</style>
+  </style>
+  <body>
+    
+    <div class='container'>
+        <div class="menu">
+          <div id='ping-title'>
+            <h1 style="z-index:10;position:relative;">Ping Pong</h1>
+            <img id='logo-racket' alt='logo' src='../images/racket.png' class="object-scale-down h-20 w-20 pt-8">
+          </div>
+          <h3>Comment jouer ?</h3>
+          <h4>Joueur contre d'autres joueurs Player Vs Player </h4>
+          <ol class="list-decimal md:w-full lg:w-32 xl:w-3/4 rounded overflow-hidden shadow-xl text-xl text-gray-100">
+            <li>Entrer votre <b>nom.</b></li>
+            <li>Choisir le nombre de <b>joueurs.</b></li>
+            <li> <b>Démarrer</b> la partie de jeu.</li>
+            <li>La partie commence si vous cliquez sur Espace ou le bouton Démarrer</li>
+          </ol>
+         
+          <div id='bigdiv'>
+            <div>
+              <h4>Créer une partie contre joueur</h4>
+              <div class="w-1/2 sm:w-auto md:w-full lg:w-32 xl:w-3/4">
+                <div class="flex items-center border-b border-b-2 border-teal-500 py-2">
+                  <input name="name" id="nameNew" class="appearance-none bg-transparent border-none w-full text-gray-100 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Entrer votre nom" aria-label="Full name">
+                  <select name="nb_player" id='nb_player_select' class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                    <option value="2" selected>2</option>
+                    <option value="4">4</option>
+                  </select>
+                  <button id="new" class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+                    Démarrer
+                  </button>
+                 
+                </div>
+                
+              </div>
+              <button type="button" class="close" aria-label="Close" onclick="exit()">
+                  Retour
+              </button>
+            </div>
+           
+            
+          </div>
+    
+       
+    
+          
+    
+        </div>
+        <div class='main_game' style="display:none;">
+          <h2 id="userHello"></h2>
+          <div id='terrain'></div>
+          <div class='control_button'>
+            <button id='start_button'>Start the game</button>
+            <button id='quit_button' onclick="exit()">Exit the game</button>
+          </div>
+        </div>
+      </div>
+      <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="../js/socket.js"></script>
+    
+    
+        
+  
+
+  
+  </body>
+  
+  
+  </html>
