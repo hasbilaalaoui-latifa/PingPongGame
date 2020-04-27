@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ping Pong</title>
+  <link rel="icon" href="../../images/racket.png">
+  <link rel="stylesheet" type="text/css" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="../node_modules/skeleton-css/css/skeleton.css">
+  <script src="../js/ball.js"></script>
+  <script src="../js/player.js"></script>
+  <script src="../js/room.js"></script>
+  <script src="../js/game.js"></script>
+  <script src="../js/game.display.js"></script>
+  <script src="../js/game.control.js"></script>
+  <script src="../js/game.keycode.js"></script>
+  <script src="../js/game.ia.js"></script>
+  <style>
+    body {
+        background: url("https://m.keepsporting.com/assets/img/sports/tennis-da-tavolo.jpg?1481814759") no-repeat center fixed;
+        margin:0;
+        padding:0;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position:  center;
+        color : white;
+
+
+
+
+    }
+</style>
+  </style>
+  <body>
+    
+    <div class='container'>
+        <div class="menu">
+          <div id='ping-title'>
+            <h1 style="z-index:10;position:relative;">Ping Pong</h1>
+            <img id='logo-racket' alt='logo' src='../images/racket.png' class="object-scale-down h-20 w-20 pt-8">
+          </div>
+          <h3>Votre adversaire vous attends .. </h3>
+          <h4>Comment faire ? </h4>
+
+          <ol class="list-decimal md:w-full lg:w-32 xl:w-3/4 rounded overflow-hidden shadow-xl text-xl text-gray-100">
+            <li> Entrer votre <b>nom.</b></li>
+            <li>Entrer <b>l'identifiant</b> de la salle du jeu que vous voulez joindre.</li>
+            <li><b>Démarrer</b> la partie de jeu.</li>
+            <li>La partie commence si vous cliquez sur Espace ou le bouton Démarrer</li>
+          </ol>
+         
+
+          <div class="w-1/2 sm:w-auto md:w-full lg:w-32 xl:w-3/4">
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2" for="nameJoin">
+                  Nom d'utilisateur
+                </label>
+                <input name="name" id="nameJoin" class="appearance-none block w-full bg-gray-200 text-gray-100 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Entrer votre nom">
+                <p class="text-red-500 text-xs italic"></p>
+                <label class="block uppercase tracking-wide text-gray-100 text-xs font-bold mb-2" for="room">
+                    Identifiant de la salle
+                 </label>
+                 <input name="room" id="room" class="appearance-none bg-transparent border-none w-full text-gray-100 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Room-1" aria-label="Full name">
+                 <button id="join" class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+                    Démarrer
+                  </button>
+              </div>
+
+              
+            </div>
+          </div>
+    
+       
+    
+          
+    
+        </div>
+        <div class='main_game' style="display:none;">
+          <h2 id="userHello"></h2>
+          <div id='terrain'></div>
+          <div class='control_button'>
+            <button id='start_button'>Start the game</button>
+            <button id='quit_button'>Exit the game</button>
+          </div>
+        </div>
+      </div>
+      <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="../js/socket.js"></script>
+    
+    
+        
+  
+
+  
+  </body>
+  
+  
+  </html>
