@@ -50,6 +50,6 @@ Vous avez un menu pour choisir si vous souhaiter jouer :
 ![img](https://i.imgur.com/mv4WE8h.jpg)
  
 * **L'interface de Terrain** :
-![img](https://i.imgur.com/bTgHZiD.jpg)
+![img](https://i.imgur.com/thYmWh1.jpg)
 
 **© LATIFA HASBILAALAOUI**
