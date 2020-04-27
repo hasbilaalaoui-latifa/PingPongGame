@@ -30,13 +30,31 @@ game.ia = {
   },
 
   followBall: function () {
+
+    // simple AI & Decison Tree
+
+    this.player.posY += ((this.ball.posY - (this.player.posY + this.player.height/2)))*0.1;
+
+  if (this.ball.posY < this.player.posY + this.player.height / 2) {
+    // la position de la balle est sur l'écran, au dessus de celle de la raquette
+    this.ball.velocityY = +this.ball.velocityY;
+    this.player.posY = this.player.posY - this.ball.getSpeed() + 1;
+  } else if (this.ball.posY > this.player.posY + this.player.height / 2) {
+    // la position de la balle est sur l'écran, en dessous de celle de la raquette
+    this.player.posY = this.player.posY + this.ball.getSpeed() - 1;
+    this.ball.velocityY = -this.ball.velocityY;
+
+  }
+
+/*
     if (this.ball.posY < this.player.posY + this.player.height / 2) {
       // la position de la balle est sur l'écran, au dessus de celle de la raquette
       this.player.posY = this.player.posY - this.ball.getSpeed() + 1;
     } else if (this.ball.posY > this.player.posY + this.player.height / 2) {
       // la position de la balle est sur l'écran, en dessous de celle de la raquette
       this.player.posY = this.player.posY + this.ball.getSpeed() - 1;
-    }
+    }*/
+
   },
 
   goCenter: function () {
@@ -47,3 +65,4 @@ game.ia = {
     }
   }
 }
+
