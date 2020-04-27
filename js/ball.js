@@ -6,6 +6,8 @@ class Ball {
         this.speed = 5;
         this.start_game = false;
         this.wallSound = new Audio('../sound/wall.ogg');
+        this.velocityX = 5;
+        this.velocityY = 5;
         if (player_pos == 1) {
             this.posX = 200;
             this.posY = 200;
