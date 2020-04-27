@@ -2,7 +2,8 @@ class Game {
     constructor(ball) {
         this.groundWidth = 900;
         this.groundHeight = 500;
-        this.groundColor = "#DCDCDC"; //gainsboro color
+        this.groundColor= "#FFA500";
+        //this.groundColor = "#FFD700"; 
         this.netWidth = 7;
         this.netColor = "#FFFFFF";
         this.scorePosPlayer1 = 390;

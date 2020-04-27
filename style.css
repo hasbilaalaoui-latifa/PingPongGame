@@ -1,0 +1,391 @@
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+html { overflow-y: hidden; }
+body {
+    background:orange;
+    background: url("https://m.keepsporting.com/assets/img/sports/tennis-da-tavolo.jpg?1481814759") no-repeat center fixed;
+    margin:0;
+    padding:0;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position:  center;
+    height:80%;
+}
+
+#exit {
+    height:30px;
+    width:30px;
+    background:#006680;
+    border: 1px solid black;
+    border-radius:50px;
+    position:Absolute;
+    top:-30px;
+    z-index:50;
+    right:-15px;
+    -webkit-transition:0.5s;
+    transition:0.5s;
+    cursor:pointer;
+
+}
+#exit:after {
+    content:"";
+    display:block;
+    height:15px;
+    width:15px;
+    background:transparent;
+    border-radius:50px;
+    position:absolute;
+    top:5px;
+    left:5px;
+
+    border:3px solid orange;
+    border-top-color:transparent;
+
+}
+
+#exit:before {
+    content:"";
+    display:block;
+    height:10px;
+    width:3px;
+    background:orange;
+    z-index:70;
+    position:Absolute;
+    right:13px;
+    top:6px;
+
+}
+#circle {
+    height:40px;
+    width:40px;
+    background:transparent;
+    border:1px solid white;
+    border-radius:50px;
+    position:absolute;
+    top:-35px;
+    z-index:40;
+    right:-20px;
+
+}
+
+#exit:hover {
+    background:#7A0000;
+
+}
+
+
+
+#allthethings {
+    width:0px;
+    height:0px;
+
+    border-left: 300px solid transparent;
+    border-right:300px solid transparent;
+    border-top: 300px solid transparent;
+    border-radius: px;
+    position:relative;
+    margin:auto;
+    top:5px;
+    left:2px;
+
+
+
+
+
+
+}
+#copyright{
+
+color : white;
+    text-align: center;
+    position: center;
+    top:600px;
+    right:400px;
+    position:absolute;
+    z-index: 1;
+}
+
+#single {
+
+    position:relative;
+    bottom:330px;
+    right:300px;
+    height:50px;
+    width:600px;
+    background:#006680;
+    text-align:center;
+    font-size:30px;
+    background-size: 1px 300%;
+    -webkit-transition:0.5s;
+    transition:0.5s;
+    color:orange;
+    font-family:shadows into light;
+
+    cursor:pointer;
+
+
+
+}
+
+#single:hover {
+    background:#7A0000;
+    color:white;
+    -webkit-transform:rotate(-1deg);
+    transform:rotate(-2deg);
+
+
+}
+
+#multiplayer:hover {
+    background:#7A0000;
+    color:white;
+
+    -webkit-transform:rotate(-2deg);
+    transform:rotate(-2deg);
+
+
+}
+
+#credits:hover {
+    background:#7A0000;
+    color:white;
+    -webkit-transform:rotate(-2deg);
+    transform:rotate(-2deg);
+
+}
+
+#options:hover {
+    background:#7A0000;
+    color:white;
+    -webkit-transform:rotate(-2deg);
+    transform:rotate(-2deg);
+
+}
+
+#left {
+    height:100px;
+    width:600px;
+    background:orange;
+    position:absolute;
+    z-index:6;
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg);
+    top:-175px;
+    right:-104px;
+    border-top:1px solid white;
+
+}
+#right {
+    height:100px;
+    width:600px;
+    background:orange;
+    position:absolute;
+    top:-229px;
+    -webkit-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+    z-index:7;
+    left:-56px;
+    border-top:1px solid white;
+
+
+}
+
+
+
+#single p {
+    position:relative;
+    top:2px;
+    right:4px;
+
+
+}
+
+#multiplayer {
+    height:50px;
+    width:500px;
+    background:#006680;
+    position:relative;
+    bottom:345px;
+    right:240px;
+    text-align:center;
+    font-size:30px;
+    font-family:shadows into light;
+    color:orange;
+    -webkit-transition:0.5s;
+    transition:0.5s;
+    cursor:pointer;
+
+
+
+}
+#multiplayer p {
+    position:relative;
+    top:0px;
+    right:9px;
+
+}
+
+#options {
+
+    height:50px;
+    width:400px;
+    background:#006680;
+    position:relative;
+    bottom:360px;
+    right:200px;
+    font-size:30px;
+    text-align:center;
+    font-family:shadows into light;
+    color:orange;
+    -webkit-transition:0.5s;
+    transition:0.5s;
+    cursor:pointer;
+
+}
+
+#options p {
+    position:relative;
+    top:0px;
+    right:4px;
+
+}
+
+#credits {
+    height:50px;
+    width:300px;
+    position:relative;
+    background:#006680;
+    bottom:375px;
+    font-size:30px;
+    right:150px;
+    text-align:center;
+    font-family:shadows into light;
+    color:orange;
+    -webkit-transition:0.5s;
+    transition:0.5s;
+    cursor:pointer;
+
+}
+
+#credits p {
+    position:relative;
+    top:0px;
+
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Lily+Script+One);
+
+body {
+    margin:0;
+    font-family:arial,tahoma,sans-serif;
+    font-size:12px;
+    font-weight:normal;
+    direction:ltr;
+    background:white;
+}
+
+form {
+    margin:10% auto 0 auto;
+    padding:30px;
+    width:400px;
+    height:auto;
+    overflow:hidden;
+    background:white;
+    border-radius:10px;
+}
+
+form label {
+    font-size:14px;
+    color:darkgray;
+    cursor:pointer;
+}
+
+form label,
+form input {
+    float:left;
+    clear:both;
+}
+
+form input {
+    margin:15px 0;
+    padding:15px 10px;
+    width:100%;
+    outline:none;
+    border:1px solid #bbb;
+    border-radius:20px;
+    display:inline-block;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -webkit-transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -ms-transition:0.2s ease all;
+    -o-transition:0.2s ease all;
+    transition:0.2s ease all;
+}
+
+form input[type=text]:focus,
+form input[type="password"]:focus {
+    border-color:cornflowerblue;
+}
+
+input[type=submit] {
+    padding:15px 50px;
+    width:auto;
+    background:#1abc9c;
+    border:none;
+    color:white;
+    cursor:pointer;
+    display:inline-block;
+    float:right;
+    clear:right;
+    -webkit-transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -ms-transition:0.2s ease all;
+    -o-transition:0.2s ease all;
+    transition:0.2s ease all;
+}
+
+input[type=submit]:hover {
+    opacity:0.8;
+}
+
+input[type="submit"]:active {
+    opacity:0.4;
+}
+
+.forgot,
+.register {
+    margin:10px;
+    float:left;
+    clear:left;
+    display:inline-block;
+    color:cornflowerblue;
+    text-decoration:none;
+}
+
+.forgot:hover,
+.register:hover {
+    color:darkgray;
+}
+
+#logo {
+    margin:0 auto;
+    width:200px;
+    font-family:'Lily Script One', cursive;
+    font-size:60px;
+    font-weight:bold;
+    text-align:center;
+    color:lightgray;
+    -webkit-transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -ms-transition:0.2s ease all;
+    -o-transition:0.2s ease all;
+    transition:0.2s ease all;
+}
+
+#logo:hover {
+    color:cornflowerblue;
+}

@@ -137,7 +137,7 @@
             return;
         }
         const message =
-            `Hello, ${name}.`;
+            `Salut ! ${name}.`;
         game.amIPlayerOne = true;
         game.playerId = 1
         this.pong = new Room('IA_room');

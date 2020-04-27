@@ -1,140 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Ping Pong</title>
-  <link rel="icon" href="../../images/racket.png">
-  <link rel="stylesheet" type="text/css" href="output.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="../node_modules/skeleton-css/css/skeleton.css">
-  <script src="../js/ball.js"></script>
-  <script src="../js/player.js"></script>
-  <script src="../js/room.js"></script>
-  <script src="../js/game.js"></script>
-  <script src="../js/game.display.js"></script>
-  <script src="../js/game.control.js"></script>
-  <script src="../js/game.keycode.js"></script>
-  <script src="../js/game.ia.js"></script>
-  <style>
+    <meta charset="UTF-8">
+    <title>PING PONG GAME</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+<style>
     body {
-      font-size: inherit;
-      line-height: inherit;
-      font-weight: inherit;
-      font-family: inherit;
-      color: inherit;
+        background: url("https://m.keepsporting.com/assets/img/sports/tennis-da-tavolo.jpg?1481814759") no-repeat center fixed;
+        margin:0;
+        padding:0;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position:  center;
+
+
+
     }
-    #ping-title {
-      display: flex;
-    }
-    .items-center {
-      align-items: inherit;
-    }
-    #terrain {
-      height: 503px;
-      width: 900px;
-      background-color: rgb(218, 207, 207);
-    }
-  </style>
+</style>
+    <script>
+        var snd = new Audio("sound/btn_menu.mp3");
+
+        function GotoPlay(num){
+            snd.play();
+
+            //window.open("single.html");
+
+                switch(num) {
+
+
+                    //let num = num_dire;
+
+                    case (num=1): {
+
+                        window.open("public/single.html");
+                                    //window.location.href="single.html";
+
+
+                    }
+                    case (num=2): {
+
+                        window.open("public/multiplayer.html");
+                    }
+                    case (num=3): {
+                        window.open("public/joinroom.html");
+                    }
+                }
+            //window.location.href="single.html";
+        }
+
+
+    </script>
 </head>
-
-
 <body>
-  <div class='container'>
-    <div class="menu">
-      <div id='ping-title'>
-        <h1 style="z-index:10;position:relative;">Ping Pong</h1>
-        <img id='logo-racket' alt='logo' src='../images/racket.png' class="object-scale-down h-20 w-20 pt-8">
-      </div>
-      <h3>Comment jouer ?</h3>
-      <h4>Joueur contre Joueur PvP</h4>
-      <ol class="list-decimal md:w-full lg:w-32 xl:w-3/4 rounded overflow-hidden shadow-xl text-xl text-gray-700">
-        <li><b>Joueur 1</b> Entrer votre nom.</li>
-        <li><b>Joueur 1</b> Démarrer la partie de jeu.</li>
-        <li><b>Joueur 2</b> Entrer l'identifiant de la salle du jeu que vous voulez.</li>
-        <li><b>Joueur 2</b> Démarrer la partie de jeu.</li>
-        <li>La partie commence si vous cliquez sur Espace ou le bouton Démarrer</li>
-      </ol>
-      <h4>Joueur contre Machine IA</h4>
-      <ol class="list-decimal md:w-full lg:w-32 xl:w-3/4 rounded overflow-hidden shadow-xl text-xl text-gray-700">
-        <li>Entrer votre nom.</li>
-        <li>Démarrer la partie de jeu.</li>
-        <li>La partie commence si vous cliquez sur Espace ou le bouton Démarrer</li>
-      </ol>
-      <div id='bigdiv'>
-        <div>
-          <h4>Créer une partie contre joueur</h4>
-          <div class="w-1/2 sm:w-auto md:w-full lg:w-32 xl:w-3/4">
-            <div class="flex items-center border-b border-b-2 border-teal-500 py-2">
-              <input name="name" id="nameNew" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Jane Doe" aria-label="Full name">
-              <button id="new" class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
-                Démarrer
-              </button>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h4>Créer une partie contre machine IA</h4>
-          <div class="w-1/2 sm:w-auto md:w-full lg:w-32 xl:w-3/4">
-            <div class="flex items-center border-b border-b-2 border-teal-500 py-2">
-              <input name="name" id="nameNewIA" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Jane Doe" aria-label="Full name">
-              <button id="new_IA" class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
-                Démarrer
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+<div id="allthethings">
+    <div id="left"></div>
+    <div id="single" onclick="GotoPlay(1)" > <p>SINGLE PLAYER</p></div>
+    <div id="multiplayer" onclick="GotoPlay(2)"><p>MULTIPLAYER</p></div>
+    <div id="options" onclick="GotoPlay(3)"><p>JOIN A ROOM</p></div>
 
-      <div class="inline-block relative w-64">
-        <h6>Nombre des joueurs</h6>
-        <select name="nb_player" id='nb_player_select' class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-          <option value="2" selected>2</option>
-          <option value="4">4</option>
-        </select>
-        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-        </div>
-      </div>
+    <div id="right"></div>
 
-      <h4>Joindre une partie existante</h4>
+    <div id="exit"></div>
 
-      <div class="w-1/2 sm:w-auto md:w-full lg:w-32 xl:w-3/4">
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="nameJoin">
-              Nom d'utilisateur
-            </label>
-            <input name="name" id="nameJoin" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
-            <p class="text-red-500 text-xs italic">*</p>
-          </div>
-          <div class="w-full md:w-1/2 px-3">
-            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="room">
-                Identifiant de la salle
-             </label>
-            <div class="flex items-center border-b border-b-2 border-teal-500">
-              <input name="room" id="room" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Room-1" aria-label="Full name">
-              <button id="join" class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
-                Démarrer
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div id="circle"></div>
 
-    </div>
-    <div class='main_game' style="display:none;">
-      <h2 id="userHello"></h2>
-      <div id='terrain'></div>
-      <div class='control_button'>
-        <button id='start_button'>Start the game</button>
-        <button id='quit_button'>Exit the game</button>
-      </div>
-    </div>
-  </div>
-  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="../js/socket.js"></script>
+</div>
+<div id="copyright">© LATIFA HASBILAALAOUI</div>
+
 
 </body>
 </html>
