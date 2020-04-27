@@ -248,15 +248,15 @@ class Game {
         let winner = null;
         if (game.nb_players == 2) {
             if (this.playerOne.score === this.scoreToWin)
-                winner = this.getPlayerOne().getPlayerName() + ' wins !';
+                winner = this.getPlayerOne().getPlayerName() + ' est gagné !';
             else if (this.playerTwo.score === this.scoreToWin)
-                winner = this.getPlayerTwo().getPlayerName() + ' wins !';
+                winner = this.getPlayerTwo().getPlayerName() + ' est gagné !';
         }
         else if (game.nb_players == 4) {
             if (this.playerOne.score === this.scoreToWin)
-                winner = this.getPlayerOne().getPlayerName() + ' and ' + this.getPlayerThree().getPlayerName() + ' wins !';
+                winner = this.getPlayerOne().getPlayerName() + ' and ' + this.getPlayerThree().getPlayerName() + ' est gagné !';
             else if (this.playerTwo.score === this.scoreToWin)
-                winner = this.getPlayerTwo().getPlayerName() + ' and ' + this.getPlayerFour().getPlayerName() + ' wins !';
+                winner = this.getPlayerTwo().getPlayerName() + ' and ' + this.getPlayerFour().getPlayerName() + ' est gagné !';
         }
         if (winner !== null) {
             this.playersBallLayer.clear();
