@@ -37,24 +37,19 @@ Vous avez un menu pour choisir si vous souhaiter jouer :
 
 # IV)- LES INTERFACES DU JEU :
 
-*  **HOME/MENU du jeu :** 
-![img](https://i.imgur.com/Js4ZKIU.png)
+*  **HOME/MENU du jeu :**
+![img](https://i.imgur.com/Ej5ZSrB.jpg)
 
 * **Pour un seul joueur ( SINGLE PLAYER ) :**
-![img](images/single.png)
+![img](https://i.imgur.com/zXkR1hu.jpg)
 
 * **Pour multijoueurs ( MULTIPLAYERS ):**
-
-![img](images/pvsp.png)
+![img](https://i.imgur.com/zwR4Hp1.jpg)
 
 * **Pour joindre un jeu en ligne ( JOIN ROOM ):**
- ![img](images/room.png)
+![img](https://i.imgur.com/mv4WE8h.jpg)
  
 * **L'interface de Terrain** :
-* ![img](images/terrain.png)
+![img](https://i.imgur.com/bTgHZiD.jpg)
 
 **© LATIFA HASBILAALAOUI**
-
-
-
-
